@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row text-center">
+  <div class="col-10">
+    <img src="<%= asset_path 'img8.jpeg' %>" class="card-img-top" alt="img3" width="200px" height="150px">
+    <img src="<%= asset_path 'img7.jpeg' %>" class="card-img-top" alt="img3" width="200px" height="150px">
+    <img src="<%= asset_path 'img6.jpeg' %>" class="card-img-top" alt="img3" width="200px" height="150px">
+    <img src="<%= asset_path 'img5.jpeg' %>" class="card-img-top" alt="img3" width="200px" height="150px">
+    <img src="<%= asset_path 'img4.jpeg' %>" class="card-img-top" alt="img3" width="200px" height="150px">
+  </div>
+</div>
+<div class="row">
+  <div class="col-10">
+<h1>Productos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td class="btn btn-success"><%= link_to 'Ver', product %></td>
+        <td class="btn btn-success"><%= link_to 'Editar', edit_product_path(product) %></td>
+        <td class="btn btn-success"><%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo producto', new_product_path %>
+</div>
+</div>

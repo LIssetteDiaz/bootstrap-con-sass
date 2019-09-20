@@ -1,2 +1,32 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="texto text-center">Bienvenidos</h1>
+<h2 class="texto text-center">Realiza ventas online y nosotros hacemos todo el trabajo por ti </h2>
+<div class="row">
+  <div class="imagen col-10">
+    <img src="<%= asset_path 'img1.jpeg' %>" class="card-img-top" Width="90%" height="350" alt="img3">
+  </div>
+</div>
+<div class="row">
+<div class="card-deck text-center">
+
+  <div class="card col-md-5 text-center">
+    <img src="<%= asset_path 'img2.png' %>" class="card-img-top" alt="img2">
+    <div class="card-body">
+      <h3 class="card-title">solicitar productos</h3>
+      <p class="card-text">Ingresa el producto que desees vender y emprende con nuestra</p>
+      <p>red de ventas</p>
+      <a href="<%= new_product_path %>" class="btn btn-primary">Solicitar</a>
+
+    </div>
+  </div>
+  <div class="card col-md-5 text-center">
+    <img src="<%= asset_path 'img3.jpeg' %>" class="card-img-top" alt="img3">
+    <div class="card-body">
+      <h3 class="card-title">Edita tus productos</h3>
+      <p class="card-text">Edita tus productos cambiando o eliminando.</p>
+      <p class="card-text">:3</p>
+      <a href="<%= products_path %>" class="btn btn-primary">Editar</a>
+
+    </div>
+  </div>
+</div>
+</div>

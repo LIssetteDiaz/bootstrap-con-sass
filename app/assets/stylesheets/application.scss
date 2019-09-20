@@ -15,3 +15,22 @@
  *= require_tree .
  *= require_self
  */
+
+.container, .card{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.btn{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.imagen{
+  margin-left: 130px;
+}
+
+body{
+  background-color: #98E4C6;
+}
